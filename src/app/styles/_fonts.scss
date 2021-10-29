@@ -1,9 +1,15 @@
+@import "breakpoints";
+
 @mixin Subtitle {
   font-family: Work Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 1.25rem;
   line-height: 120%;
+
+  @media (max-width: $bp-mobile) {
+    font-size: 1.5rem;
+  }
 }
 
 @mixin HeadingSmall {
@@ -20,6 +26,10 @@
   font-weight: 500;
   font-size: 2rem;
   line-height: 120%;
+
+  @media (max-width: $bp-mobile) {
+    font-size: 1.5rem;
+  }
 }
 
 @mixin Paragraph {
@@ -28,6 +38,10 @@
   font-weight: normal;
   font-size: 1rem;
   line-height: 150%;
+
+  @media (max-width: $bp-mobile) {
+    font-size: 0.85rem;
+  }
 }
 
 @mixin Description {

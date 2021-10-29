@@ -1,6 +1,7 @@
 @import "fonts";
 @import "borders";
 @import "colors";
+@import "breakpoints";
 
 .simulation-page {
   display: flex;
@@ -86,6 +87,11 @@
 
     width: 100%;
     max-width: 100%;
+
+    @media (max-width: $bp-mobile) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   &__calculator-input-group {
@@ -97,9 +103,18 @@
     width: 40%;
 
     position: relative;
-    
+
     &:first-of-type {
       width: calc(60% - 1rem);
+
+      @media(max-width: $bp-mobile) { 
+        width: 100%;
+      }
+    }
+
+    @media(max-width: $bp-mobile) {
+      width: 100%;
+      margin-bottom: 1rem;
     }
 
     &--label {
@@ -124,7 +139,8 @@
       color: $text-gray;
       text-align: left !important;
 
-      background: url("../../../../assets/icons/money.svg") no-repeat scroll 1rem center;
+      background: url("../../../../assets/icons/money.svg") no-repeat scroll
+        1rem center;
       background-size: 1.5rem;
 
       width: 100%;
@@ -151,7 +167,7 @@
 
       margin: 0;
     }
-    
+
     &--paragraph-month {
       color: $text-black;
 
@@ -165,7 +181,7 @@
     &--arrow {
       border: none;
       background-color: transparent;
-      
+
       height: 2rem;
       width: 2rem;
 
@@ -175,14 +191,16 @@
     }
 
     &--arrow-left {
-      background: url("../../../../assets/icons/arrow-left.svg") no-repeat scroll center center;
+      background: url("../../../../assets/icons/arrow-left.svg") no-repeat
+        scroll center center;
       background-size: 1rem;
 
       left: 1rem;
     }
 
     &--arrow-right {
-      background: url("../../../../assets/icons/arrow-right.svg") no-repeat scroll center center;
+      background: url("../../../../assets/icons/arrow-right.svg") no-repeat
+        scroll center center;
       background-size: 1rem;
 
       right: 1rem;
