@@ -24,13 +24,13 @@ export class GoalsService {
     /* Initializing the mocks */
 
     this.mockedGoalOptions = [
-      { id: 'build-an-emergency-fund', icon: 'build-an-emergency-fund', name: 'Build an emergency fund', startingValue: 1000, startingPeriod: 12 },
-      { id: 'buy-a-car', icon: 'buy-a-car', name: 'Buy a car', startingValue: 0, startingPeriod: 0 },
-      { id: 'buy-a-house', icon: 'buy-a-house', name: 'Buy a house', startingValue: 0, startingPeriod: 0 },
-      { id: 'go-to-college', icon: 'go-to-college', name: 'Go to college', startingValue: 0, startingPeriod: 0 },
-      { id: 'have-a-baby', icon: 'have-a-baby', name: 'Have a baby', startingValue: 0, startingPeriod: 0 },
-      { id: 'take-a-vacation', icon: 'take-a-vacation', name: 'Take a vacation', startingValue: 0, startingPeriod: 0 },
-      { id: 'throw-a-wedding-party', icon: 'throw-a-wedding-party', name: 'Throw a wedding party', startingValue: 0, startingPeriod: 0 },
+      { id: 'build-an-emergency-fund', icon: 'build-an-emergency-fund', name: 'Build an emergency fund', startingValue: 10000, startingPeriod: 24 },
+      { id: 'buy-a-car', icon: 'buy-a-car', name: 'Buy a car', startingValue: 10000, startingPeriod: 12 },
+      { id: 'buy-a-house', icon: 'buy-a-house', name: 'Buy a house', startingValue: 200000, startingPeriod: 48 },
+      { id: 'go-to-college', icon: 'go-to-college', name: 'Go to college', startingValue: 75000, startingPeriod: 12 },
+      { id: 'have-a-baby', icon: 'have-a-baby', name: 'Have a baby', startingValue: 20000, startingPeriod: 12 },
+      { id: 'take-a-vacation', icon: 'take-a-vacation', name: 'Take a vacation', startingValue: 5000, startingPeriod: 6 },
+      { id: 'throw-a-wedding-party', icon: 'throw-a-wedding-party', name: 'Throw a wedding party', startingValue: 5000, startingPeriod: 6 },
     ];
 
     /* Initialing the behavior subjects which will be used
