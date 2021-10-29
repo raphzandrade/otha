@@ -1,0 +1,80 @@
+<section class="simulation-page">
+    <ng-container *ngIf="(activeGoalOption$ | async) as option">
+        <h1 class="simulation-page__title">
+            Let's plan your <strong>saving goal.</strong>
+        </h1>
+
+        <div appCard class="simulation-page__calculator">
+
+            <div class="simulation-page__calculator-description">
+                <!-- icon -->
+                <div class="simulation-page__calculator-description--icon-wrapper">
+                    <img class="simulation-page__calculator-icon" [src]="'./assets/icons/' + option.icon + '.svg'">
+                </div>
+
+                <div class="simulation-page__calculator-description--text-wrapper">
+                    <!-- title -->
+                    <h1 class="simulation-page__calculator-title">{{option.name}}</h1>
+
+                    <!-- subtitle -->
+                    <h2 class="simulation-page__calculator-subtitle">Saving goal</h2>
+                </div>
+            </div>
+
+
+            <form [formGroup]="form" class="simulation-page__calculator-form">
+                <!-- amount -->
+                <div class="simulation-page__calculator-input-group">
+
+                    <span class="simulation-page__calculator-input-group--label">Total amount</span>
+                    <input
+                        class="simulation-page__calculator-input-group--input simulation-page__calculator-input-group--amount-input"
+                        formControlName="amount" currencyMask [options]="{ prefix: '', thousands: ',', decimal: '.' }">
+                </div>
+
+                <!-- date -->
+                <div class="simulation-page__calculator-input-group">
+                    <span class="simulation-page__calculator-input-group--label">Reach goal by</span>
+
+                    <div class="simulation-page__calculator-input-group--input simulation-page__custom-date-input" (keydown)="keyboardHandler($event)">
+                        <p
+                            class="simulation-page__custom-date-input--paragraph simulation-page__custom-date-input--paragraph-month">
+                            {{ reachDateMonth }}</p>
+                        <p
+                            class="simulation-page__custom-date-input--paragraph simulation-page__custom-date-input--paragraph-year">
+                            {{ reachDateYear}} </p>
+
+                        <button
+                            class="simulation-page__custom-date-input--arrow simulation-page__custom-date-input--arrow-left"
+                            (click)="onMonthNavigation(-1)"></button>
+                        <button
+                            class="simulation-page__custom-date-input--arrow simulation-page__custom-date-input--arrow-right"
+                            (click)="onMonthNavigation(1)"></button>
+                    </div>
+
+                    <!-- Hidden input for bindings -->
+                    <input class="simulation-page__calculator-input-group--input" type="date"
+                        formControlName="reachDate" [min]="minDate" required hidden>
+                </div>
+            </form>
+
+            <!-- result -->
+            <div class="simulation-page__calculator-result">
+
+                <div class="simulation-page__calculator-result-amount">
+                    <span class="simulation-page__calculator-result-amount--subtitle">Monthly amount</span>
+                    <span class="simulation-page__calculator-result-amount--heading">{{monthlyAmount}}</span>
+                </div>
+
+                <p class="simulation-page__calculator-result-caption">
+                    You're planning <strong>{{periodDuration + ' monthly deposits'}}</strong> to reach your<strong>
+                        {{amount}}
+                    </strong>goal by <strong>{{reachDateMonth + ' ' + reachDateYear}}</strong>.
+                </p>
+
+            </div>
+
+            <button appButton class="simulation-page__confirm-btn">Confirm</button>
+        </div>
+    </ng-container>
+</section>

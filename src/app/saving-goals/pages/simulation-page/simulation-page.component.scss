@@ -1,0 +1,238 @@
+@import "fonts";
+@import "borders";
+@import "colors";
+
+.simulation-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &__title {
+    @include Subtitle;
+
+    color: $text-brand;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__calculator {
+    padding: 2rem;
+
+    max-width: 35rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__calculator-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: 1.25rem;
+
+    &--icon-wrapper {
+      flex-basis: 10%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &--text-wrapper {
+      flex-basis: 90%;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+
+      margin-left: 1rem;
+    }
+  }
+
+  &__calculator-icon {
+    height: 4rem;
+    width: auto;
+  }
+
+  &__calculator-title {
+    @include HeadingSmall;
+
+    color: $text-black;
+    margin: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  &__calculator-subtitle {
+    @include Paragraph;
+
+    color: $text-gray;
+
+    margin: 0;
+  }
+
+  &__calculator-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1.5rem;
+
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__calculator-input-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    width: 40%;
+
+    position: relative;
+    
+    &:first-of-type {
+      width: calc(60% - 1rem);
+    }
+
+    &--label {
+      @include Description;
+
+      color: $text-black;
+
+      margin-bottom: 0.25rem;
+    }
+
+    &--input {
+      border: 2px solid $background-gray;
+      border-radius: $border-radius;
+    }
+
+    &--amount-input {
+      border: 2px solid $background-gray;
+
+      padding: 0.75rem 0.75rem 0.75rem 3rem;
+
+      @include HeadingSmall();
+      color: $text-gray;
+      text-align: left !important;
+
+      background: url("../../../../assets/icons/money.svg") no-repeat scroll 1rem center;
+      background-size: 1.5rem;
+
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  &__custom-date-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 100%;
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    &--paragraph {
+      @include Paragraph;
+      font-weight: 600;
+
+      margin: 0;
+    }
+    
+    &--paragraph-month {
+      color: $text-black;
+
+      margin-bottom: 0.5rem;
+    }
+
+    &--paragraph-year {
+      color: $text-gray;
+    }
+
+    &--arrow {
+      border: none;
+      background-color: transparent;
+      
+      height: 2rem;
+      width: 2rem;
+
+      position: absolute;
+
+      cursor: pointer;
+    }
+
+    &--arrow-left {
+      background: url("../../../../assets/icons/arrow-left.svg") no-repeat scroll center center;
+      background-size: 1rem;
+
+      left: 1rem;
+    }
+
+    &--arrow-right {
+      background: url("../../../../assets/icons/arrow-right.svg") no-repeat scroll center center;
+      background-size: 1rem;
+
+      right: 1rem;
+    }
+  }
+
+  &__calculator-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: $border-radius;
+    border: 2px solid $background-gray;
+
+    margin-bottom: 2rem;
+  }
+
+  &__calculator-result-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 1.5rem 2rem;
+
+    &--subtitle {
+      @include Subtitle();
+
+      color: $text-black;
+    }
+
+    &--heading {
+      @include HeadingMedium;
+
+      color: $brand-secondary;
+    }
+  }
+
+  &__calculator-result-caption {
+    @include Caption;
+
+    color: $text-black;
+
+    padding: 1.5rem 2rem;
+    margin: 0;
+
+    background-color: $background-gray;
+  }
+
+  &__confirm-btn {
+    width: 100%;
+    max-width: 20rem;
+  }
+}

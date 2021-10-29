@@ -1,0 +1,21 @@
+@mixin variables {
+    --font-primary: 'Work Sans', sans-serif;
+    --font-secondary: 'Rubik', sans-serif;
+    
+    --brand-primary: #1b31a8;
+    --brand-secondary: #0079FF;
+    --brand-primary-light: #09f;
+    
+    --background-gray: #f4f8fa;
+    --background-white: #fff;
+    
+    --text-black: #1e2a32;
+    --text-gray: #708797;
+    --text-white: #fff;
+    --text-brand: #1b31a8;
+    
+    --card-border-radius: 12px;
+    --card-box-shadow: rgba(30, 42, 50, 0.12) 0px 0px 24px 6px;
+    
+    --button-border-radius: 3.5rem;
+}

@@ -1,0 +1,15 @@
+<section class="selection-page">
+    <h1 class="selection-page__title">
+        What do you want to save for?
+    </h1>
+
+    <section class="selection-page__goals">
+        <div appCard class="selection-page__goal-option" *ngFor="let option of goalOptions$ | async">
+            <img class="selection-page__goal-option-icon" [src]="'./assets/icons/' + option.icon + '.svg'">
+            
+            <h2 class="selection-page__goal-option-title">{{option.name}}</h2>
+    
+            <button appButton (click)="onSimulateClick(option)">Simulate</button>
+        </div>
+    </section>
+</section>

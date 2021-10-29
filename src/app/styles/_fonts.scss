@@ -1,0 +1,50 @@
+@mixin Subtitle {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+  line-height: 120%;
+}
+
+@mixin HeadingSmall {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 120%;
+}
+
+@mixin HeadingMedium {
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 120%;
+}
+
+@mixin Paragraph {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+@mixin Description {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9rem;
+  line-height: 150%;
+}
+
+@mixin Caption {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+$rubik: "Rubik", sans-serif;
+$worksans: "Work Sans", sans-serif;

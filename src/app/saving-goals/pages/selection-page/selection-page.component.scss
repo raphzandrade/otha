@@ -1,0 +1,53 @@
+@import 'fonts';
+@import 'colors';
+
+.selection-page {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__title {
+    @include Subtitle;
+
+    color: $text-brand;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  &__goals {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__goal-option {
+    flex-basis: 25%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+    padding: 3rem 1rem 1rem;
+
+    margin-bottom: 5rem;
+
+    position: relative;
+  }
+
+  &__goal-option-icon {
+    height: 6rem;
+    width: auto;
+
+    position: absolute;
+    top: -3rem;
+  }
+
+  &__goal-option-title {
+    @include HeadingSmall;
+
+    text-align: center;
+  }
+}
